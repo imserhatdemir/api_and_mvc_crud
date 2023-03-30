@@ -13,7 +13,7 @@ namespace ozka.Data
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer("Server=DESKTOP-1FS4KAI\\SQLEXPRESS; database=citydb; Trusted_Connection=true;TrustServerCertificate=true;");
+			optionsBuilder.UseSqlServer("Server=yourmssql; database=citydb; Trusted_Connection=true;TrustServerCertificate=true;");
 		}
 
         public DbSet<City> Cities { get; set; }
