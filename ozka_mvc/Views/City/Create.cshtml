@@ -1,0 +1,28 @@
+﻿@using EntityLayer;
+@model City
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="City_name" class="control-label">Şehir Adı</label>
+        <input asp-for="City_name" class="form-control" />
+        <span asp-validation-for="City_name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Country" class="control-label">Ülke</label>
+        <input asp-for="Country" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Ekle" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+<div>
+    <a asp-action="Index">Şehirler Listesine Dön</a>
+</div>

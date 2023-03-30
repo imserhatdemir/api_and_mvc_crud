@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ozka_api", "ozka\ozka_api.csproj", "{9324B88E-C496-4025-8B48-161F76841D6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{CDA77834-3133-457A-8CE9-D1C9A40848D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ozka_mvc", "ozka_mvc\ozka_mvc.csproj", "{E43AE110-5365-40EF-86A7-C32E1CC5FEA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9324B88E-C496-4025-8B48-161F76841D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9324B88E-C496-4025-8B48-161F76841D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9324B88E-C496-4025-8B48-161F76841D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9324B88E-C496-4025-8B48-161F76841D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA77834-3133-457A-8CE9-D1C9A40848D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA77834-3133-457A-8CE9-D1C9A40848D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA77834-3133-457A-8CE9-D1C9A40848D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA77834-3133-457A-8CE9-D1C9A40848D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43AE110-5365-40EF-86A7-C32E1CC5FEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43AE110-5365-40EF-86A7-C32E1CC5FEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43AE110-5365-40EF-86A7-C32E1CC5FEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43AE110-5365-40EF-86A7-C32E1CC5FEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD7A235-4492-42AE-9D5B-2EF0762323DB}
+	EndGlobalSection
+EndGlobal
