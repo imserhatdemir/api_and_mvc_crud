@@ -18,10 +18,13 @@ namespace ozka_mvc.Services.CityService
         {
             _clientFactory = clientFactory;
         }
-
+        private HttpClient GetClient()
+        {
+            return _clientFactory.CreateClient("ozka_api");
+        }
         public async Task<List<City>> AddCityAsync(City city)
         {
-            var client = _clientFactory.CreateClient("ozka_api");
+            var client = GetClient();
             var response = await client.PostAsJsonAsync("api/City/", city);
 
             if (response.IsSuccessStatusCode)
@@ -37,7 +40,7 @@ namespace ozka_mvc.Services.CityService
 
         public async Task<bool> DeleteCityAsync(int id)
         {
-            var client = _clientFactory.CreateClient("ozka_api");
+            var client = GetClient();
             var response = await client.DeleteAsync($"api/City/{id}");
 
             return response.IsSuccessStatusCode;
@@ -45,7 +48,7 @@ namespace ozka_mvc.Services.CityService
 
         public async Task<IEnumerable<City>> GetCitiesAsync()
         {
-            var client = _clientFactory.CreateClient("ozka_api");
+            var client = GetClient();
             var response = await client.GetAsync("/api/City");
             var sehirler = JsonConvert.DeserializeObject<List<City>>(await response.Content.ReadAsStringAsync());
             return sehirler;
@@ -53,7 +56,7 @@ namespace ozka_mvc.Services.CityService
 
         public async Task<City> GetCityAsync(int id)
         {
-            var client = _clientFactory.CreateClient("ozka_api");
+            var client = GetClient();
             var response = await client.GetAsync($"/api/City/{id}");
 
             if (response.IsSuccessStatusCode)
@@ -69,7 +72,7 @@ namespace ozka_mvc.Services.CityService
 
         public async Task<bool> UpdateCityAsync(City city, int id)
         {
-            var client = _clientFactory.CreateClient("ozka_api");
+            var client = GetClient();
             var response = await client.PutAsJsonAsync($"api/City/{id}", city);
 
             if (response.IsSuccessStatusCode)

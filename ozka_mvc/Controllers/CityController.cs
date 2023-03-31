@@ -7,12 +7,10 @@ namespace ozka_mvc.Controllers
 {
     public class CityController : Controller
     {
-        private readonly IHttpClientFactory _clientFactory;
         private readonly ICityService _cityService;
 
-        public CityController(IHttpClientFactory clientFactory, ICityService cityService)
+        public CityController(ICityService cityService)
         {
-            _clientFactory = clientFactory;
             _cityService = cityService;
         }
         public async Task<IActionResult> Index()
